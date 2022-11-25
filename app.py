@@ -3,6 +3,19 @@ perguntas = [
     {
         "Pergunta": "Quanto é 2+2?",
         "Opções": ["1", "3", "4", "5"],
-        "Resposta":  "4"
+        "Resposta":  "4",
     }
 ]
+
+acertou = False
+for pergunta in perguntas:
+    print(pergunta["Pergunta"])
+    for i, opcão in enumerate(pergunta["Opções"]):
+        print(i, ")", opcão)
+    escolha = input("Escolha uma opcão: ")
+    if escolha == pergunta["Resposta"]:
+        print("Resposta Correta!!")
+    else:
+        print("Resposta Incorreta")
+    print()
+    
