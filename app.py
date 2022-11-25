@@ -17,15 +17,18 @@ perguntas = [
     }
 ]
 
-acertou = False
+qtd_acertos = 0
 for pergunta in perguntas:
+    
     print(pergunta["Pergunta"])
     for i, opcão in enumerate(pergunta["Opções"]):
         print(i, ")", opcão)
-    escolha = input("Escolha uma opcão: ")
-    if escolha == pergunta["Resposta"]:
+    escolha = int(input("Escolha uma opcão: "))
+    if escolha == int(pergunta["Resposta"]):
+        qtd_acertos += 1
         print("Resposta Correta!!")
     else:
-        print("Resposta Incorreta")
-    print()
+        print("Resposta Incorreta!!")
+        print()
+print(f"Você acertou {qtd_acertos} perguntas")
     
